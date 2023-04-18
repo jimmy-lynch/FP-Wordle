@@ -1,19 +1,19 @@
 //
-//  StatsView.swift
+//  SettingsView.swift
 //  Wordle
 //
-//  Created by Jimmy Lynch on 4/12/23.
+//  Created by Jimmy Lynch on 4/18/23.
 //
 
 import SwiftUI
 
-struct StatsView: View {
+struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("If this app had stats they'd be here...")
+                Text("If this app had settings they'd be here...")
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
@@ -22,8 +22,8 @@ struct StatsView: View {
     }
 }
 
-/*struct StatsView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        StatsView()
+        SettingsView()
     }
-}*/
+}
