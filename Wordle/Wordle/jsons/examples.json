@@ -1,0 +1,77 @@
+[
+    {
+        "id": "1"
+        ,"letter":"w"
+        ,"state":"Correct"
+    }
+    , {
+        "id": "2"
+        ,"letter":"e"
+        ,"state":"example"
+    }
+    , {
+        "id": "3"
+        ,"letter":"a"
+        ,"state":"example"
+    }
+    , {
+        "id": "4"
+        ,"letter":"r"
+        ,"state":"example"
+    }
+    , {
+        "id": "5"
+        ,"letter":"y"
+        ,"state":"example"
+    }
+    ,{
+        "id": "6"
+        ,"letter":"p"
+        ,"state":"example"
+    }
+    , {
+        "id": "7"
+        ,"letter":"i"
+        ,"state":"WrongSpot"
+    }
+    , {
+        "id": "8"
+        ,"letter":"l"
+        ,"state":"example"
+    }
+    , {
+        "id": "9"
+        ,"letter":"l"
+        ,"state":"example"
+    }
+    , {
+        "id": "10"
+        ,"letter":"s"
+        ,"state":"example"
+    }
+    ,{
+        "id": "11"
+        ,"letter":"v"
+        ,"state":"example"
+    }
+    , {
+        "id": "12"
+        ,"letter":"a"
+        ,"state":"example"
+    }
+    , {
+        "id": "13"
+        ,"letter":"g"
+        ,"state":"example"
+    }
+    , {
+        "id": "14"
+        ,"letter":"u"
+        ,"state":"Invalid"
+    }
+    , {
+        "id": "15"
+        ,"letter":"e"
+        ,"state":"example"
+    }
+]
