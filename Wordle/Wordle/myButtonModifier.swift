@@ -14,6 +14,7 @@ struct MyButtonModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
+            .foregroundColor(.black)
             .background(backgroundColor.opacity(isEnabled ? 1 : 0.5))
     }
 }

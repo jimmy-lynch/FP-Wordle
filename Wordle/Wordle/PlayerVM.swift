@@ -11,6 +11,7 @@ class PlayerVM: ObservableObject {
     @Published var model: Player
     @Published var Keyboard: KeyboardVM
     @Published var Game: GameVM
+    var correct: Bool = false
     
     var guessNumber: Int {
         model.guessNumber
@@ -37,19 +38,24 @@ class PlayerVM: ObservableObject {
                 decrementPosition()
                 Game.removeLetter(row: guessNumber, position: currPosition)
             }
-            
         } else if (letter == "ENTER") {
             if (currPosition == 5) { //ie its full
                 Game.submit(row: guessNumber, word: wordToGuess)
                 let letters: [String] = Game.getLetters(row: guessNumber)
                 let states: [String] = Game.getStates(letters: letters, word: wordToGuess)
-                incrementGuess()
-                for letter in letters {
-                    addGuessedLetter(letter: letter)
-                }
                 Keyboard.updateKeys(letters: letters, states: states)
-                resetPosition()
                 
+                var correct: Bool = correct(states: states)
+                incrementGuess()
+                if (correct) {
+                    self.correct = true;
+                    objectWillChange.send();
+                } else {
+                    for letter in letters {
+                        addGuessedLetter(letter: letter)
+                    }
+                    resetPosition()
+                }
             } else {
                 //some visual to show its not filled
             }
@@ -88,5 +94,18 @@ class PlayerVM: ObservableObject {
     
     func addGuessedLetter(letter: String) {
         model.addGuessedLetter(letter: letter)
+    }
+    
+    func correct(states: [String]) -> Bool {
+        for n in 0..<states.count {
+            if states[n] == "Correct" {
+                continue
+            } else {
+                return false;
+            }
+        }
+        
+        return true;
+        
     }
 }

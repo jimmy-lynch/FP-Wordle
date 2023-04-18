@@ -22,7 +22,7 @@ struct KeyboardView: View {
                         KeyView(viewModel: key)
                     }
                     .modifier(MyButtonModifier(backgroundColor: Color.clear))
-                    .disabled(key.disabled)
+                    .disabled(key.disabled || playerModel.correct)
                 }
             }
             
@@ -35,7 +35,7 @@ struct KeyboardView: View {
                         KeyView(viewModel: key)
                     }
                     .modifier(MyButtonModifier(backgroundColor: Color.clear))
-                    .disabled(key.disabled)
+                    .disabled(key.disabled || playerModel.correct)
                 }
             }
             
@@ -48,8 +48,7 @@ struct KeyboardView: View {
                         KeyView(viewModel: key)
                     }
                     .modifier(MyButtonModifier(backgroundColor: Color.clear))
-                    .disabled(key.disabled)
-                    .buttonStyle(.plain)
+                    .disabled(key.disabled || playerModel.correct)
                 }
                 
             }
