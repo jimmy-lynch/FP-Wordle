@@ -41,6 +41,12 @@ struct PuzzleView: View {
                     Spacer()
                     KeyboardView(playerModel: model, keyModel: model.Keyboard)
                     Spacer()
+                    if model.spell {
+                        Text("The word must be real.")
+                            .font(.title2)
+                            .bold()
+                            .padding(.top, -24)
+                    }
                 }
                 if model.correct {
                     Rectangle()
@@ -55,24 +61,7 @@ struct PuzzleView: View {
                         .opacity(0.05)
                 }
                 
-                if model.spell {
-                    ZStack {
-                        Rectangle()
-                            .edgesIgnoringSafeArea(.all)
-                            .foregroundColor(.white)
-                            .opacity(0.8)
-                        
-                        RoundedRectangle(cornerRadius: 50)
-                            .foregroundColor(Color("Invalid"))
-                            .frame(width: 340, height: 220)
-                            .shadow(color: .black, radius: 5)
-                        
-                        Text("The word must be real.")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .bold()
-                    }
-                }
+                
             }
             .navigationBarBackButtonHidden(true)
             .toolbar() {
