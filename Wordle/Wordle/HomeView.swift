@@ -29,6 +29,7 @@ struct HomeView: View {
                     Text("Get 6 chances to guess a 5-letter word.")
                         .font(.title2)
                         .multilineTextAlignment(.center)
+                    
                     VStack {
                         Button {
                             showPuzzles = true

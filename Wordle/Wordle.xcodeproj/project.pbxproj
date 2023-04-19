@@ -29,6 +29,7 @@
 		C717F4E829E8E3D900624451 /* examples.json in Resources */ = {isa = PBXBuildFile; fileRef = C717F4E729E8E3D900624451 /* examples.json */; };
 		C717F4EA29E8E7A500624451 /* HowToVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717F4E929E8E7A500624451 /* HowToVM.swift */; };
 		C717F4F029E8FB1E00624451 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717F4EF29E8FB1E00624451 /* PuzzleView.swift */; };
+		C78AECDE29EF911300CCE229 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78AECDD29EF911300CCE229 /* Shake.swift */; };
 		C7AAC8A929ECC54C00844B5D /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC8A829ECC54C00844B5D /* Key.swift */; };
 		C7AAC8AB29ECC5E300844B5D /* KeyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC8AA29ECC5E300844B5D /* KeyVM.swift */; };
 		C7AAC8AD29ECC77000844B5D /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAC8AC29ECC77000844B5D /* KeyView.swift */; };
@@ -64,6 +65,7 @@
 		C717F4E729E8E3D900624451 /* examples.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = examples.json; sourceTree = "<group>"; };
 		C717F4E929E8E7A500624451 /* HowToVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToVM.swift; sourceTree = "<group>"; };
 		C717F4EF29E8FB1E00624451 /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		C78AECDD29EF911300CCE229 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		C7AAC8A829ECC54C00844B5D /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		C7AAC8AA29ECC5E300844B5D /* KeyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVM.swift; sourceTree = "<group>"; };
 		C7AAC8AC29ECC77000844B5D /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				C717F49529E5C52400624451 /* WordleApp.swift */,
 				C717F4EF29E8FB1E00624451 /* PuzzleView.swift */,
+				C78AECDD29EF911300CCE229 /* Shake.swift */,
 				C7FFC19529EF55D200A418CC /* SettingsView.swift */,
 				C717F49729E5C52400624451 /* HomeView.swift */,
 				C717F4BF29E7169B00624451 /* HowToView.swift */,
@@ -271,6 +274,7 @@
 				C7AAC8AD29ECC77000844B5D /* KeyView.swift in Sources */,
 				C7AAC8AB29ECC5E300844B5D /* KeyVM.swift in Sources */,
 				C717F4C429E716B600624451 /* KeyboardView.swift in Sources */,
+				C78AECDE29EF911300CCE229 /* Shake.swift in Sources */,
 				C717F4E029E8E32000624451 /* Bundle-Decodable.swift in Sources */,
 				C717F4D029E7192B00624451 /* PlayView.swift in Sources */,
 				C717F49629E5C52400624451 /* WordleApp.swift in Sources */,

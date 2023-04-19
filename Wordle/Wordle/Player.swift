@@ -38,8 +38,8 @@ class Player {
     }
     
     func setWord(word: String) {
-        var w = word.uppercased()
-        var temp: [String] = Array(arrayLiteral: w)
+        let w = word.uppercased()
+        let temp: [String] = w.map { String($0) }
         wordToGuess = temp
     }
     

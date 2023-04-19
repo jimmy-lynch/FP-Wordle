@@ -59,7 +59,7 @@ class KeyboardVM: ObservableObject {
 
 extension KeyboardVM {
     static var example : KeyboardVM {
-        var temp: KeyboardVM = KeyboardVM()
+        let temp: KeyboardVM = KeyboardVM()
         temp.load()
         
         return temp

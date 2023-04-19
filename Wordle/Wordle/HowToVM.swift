@@ -11,7 +11,7 @@ struct HowToVM {
     let examples: [GameSquare] = Bundle.main.decode("examples.json")
     
     var example1: GameRowVM {
-        var temp: GameRowVM = GameRowVM()
+        let temp: GameRowVM = GameRowVM()
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[0]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[1]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[2]))
@@ -21,7 +21,7 @@ struct HowToVM {
     }
     
     var example2: GameRowVM {
-        var temp: GameRowVM = GameRowVM()
+        let temp: GameRowVM = GameRowVM()
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[5]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[6]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[7]))
@@ -31,7 +31,7 @@ struct HowToVM {
     }
     
     var example3: GameRowVM {
-        var temp: GameRowVM = GameRowVM()
+        let temp: GameRowVM = GameRowVM()
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[10]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[11]))
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[12]))
@@ -39,5 +39,4 @@ struct HowToVM {
         temp.addGameSquare(viewModel: GameSquareVM(model: examples[14]))
         return temp
     }
-
 }

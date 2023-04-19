@@ -9,73 +9,68 @@ import SwiftUI
 
 
 struct PuzzleView: View {
-    var puzzle: Int
+    @State var puzzle: Int
     @ObservedObject var model = PlayerVM(model: Player())
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-        
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 VStack {
                     Spacer()
-                    Text("Puzzle #\(puzzle)")
-                        .font(.title)
-                        .bold()
-                        .padding(.vertical, -15)
+                    if model.failure {
+                        Text("Try Again Later!")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.red)
+                            .padding(.vertical, -15)
+                    } else if model.correct {
+                            Text("YAY!")
+                                .font(.title)
+                                .bold()
+                                .padding(.vertical, -15)
+                                .foregroundColor(Color("Correct"))
+                    } else {
+                        Text("Puzzle #\(puzzle)")
+                            .font(.title)
+                            .bold()
+                            .padding(.vertical, -15)
+                    }
                     Spacer()
                     GameView(model: model.Game)
                     Spacer()
                     KeyboardView(playerModel: model, keyModel: model.Keyboard)
                     Spacer()
                 }
-                
                 if model.correct {
                     Rectangle()
                         .edgesIgnoringSafeArea(.all)
-                        .foregroundColor(.white)
-                        .opacity(0.8)
-                    
-                    RoundedRectangle(cornerRadius: 50)
-                        .foregroundColor(Color("Correct"))
-                        .frame(width: 340, height: 220)
-                    VStack {
-                        Text("WOOHOO!!")
-                            .font(.largeTitle)
+                        .foregroundColor(.green)
+                        .opacity(0.05)
+                }
+                if model.failure {
+                    Rectangle()
+                        .edgesIgnoringSafeArea(.all)
+                        .foregroundColor(.red)
+                        .opacity(0.05)
+                }
+                
+                if model.spell {
+                    ZStack {
+                        Rectangle()
+                            .edgesIgnoringSafeArea(.all)
+                            .foregroundColor(.white)
+                            .opacity(0.8)
+                        
+                        RoundedRectangle(cornerRadius: 50)
+                            .foregroundColor(Color("Invalid"))
+                            .frame(width: 340, height: 220)
+                            .shadow(color: .black, radius: 5)
+                        
+                        Text("The word must be real.")
+                            .font(.title)
                             .foregroundColor(.white)
                             .bold()
-                            .padding(.bottom, 5)
-                        
-                        if model.guessNumber <= 1 {
-                            Text("You got the word in \(model.guessNumber) attempt.")
-                                .font(.title2)
-                                .bold()
-                                .foregroundColor(.white)
-                                .padding(.bottom, 5)
-
-                        } else {
-                            Text("You got the word in \(model.guessNumber) attempts.")
-                                .font(.title2)
-                                .bold()
-                                .foregroundColor(.white)
-                                .padding(.bottom, 5)
-
-                        }
-                        Button {
-                            presentationMode.wrappedValue.dismiss()
-                        } label: {
-                            ZStack {
-                                Rectangle()                            .foregroundColor(.white)
-                                    .frame(width: 90, height: 45)
-                                    .cornerRadius(20)
-                                Text("BACK")
-                                    .foregroundColor(Color("Correct"))
-                                    .font(.title2)
-                                    .bold()
-
-                            }
-                        }
-                        .buttonStyle(.plain)
-                        
                     }
                 }
             }
@@ -132,6 +127,10 @@ struct PuzzleView: View {
                     }
                     .padding(.top, 10)
                 }
+            }
+            .animation(.easeOut, value: 20)
+            .onAppear {
+                model.setPuzzle(puzzle: puzzle)
             }
         }
     }

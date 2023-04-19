@@ -35,6 +35,16 @@ class GameVM: ObservableObject {
         return letters
     }
     
+    func getWord(row: Int) -> String {
+        var word: String = ""
+        let letters = getLetters(row: row)
+        for l in letters {
+            word += l
+        }
+        word = word.lowercased()
+        return word
+    }
+    
     func getStates(letters: [String], word: [String]) -> [String] {
         //return String of States!
         var output = [String]()

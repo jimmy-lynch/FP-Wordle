@@ -56,9 +56,10 @@ struct KeyboardView: View {
     }
 }
 
-struct KeyboardView_Previews: PreviewProvider {
+/*struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
         KeyboardView(playerModel: PlayerVM(model: Player()), keyModel: KeyboardVM.example)
     }
 }
 
+*/

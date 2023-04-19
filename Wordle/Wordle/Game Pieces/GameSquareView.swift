@@ -31,13 +31,13 @@ struct GameSquareView: View {
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.black)
-                        .padding(-9)
+                        .padding(.vertical, -9)
                 } else {
                     Text(viewModel.letter)
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
-                        .padding(-9)
+                        .padding(.vertical, -9)
 
                 }
             }
