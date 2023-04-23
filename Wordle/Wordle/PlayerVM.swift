@@ -60,7 +60,7 @@ class PlayerVM: ObservableObject {
                 Keyboard.updateKeys(letters: letters, states: states)
                 let correct: Bool = correct(states: states)
                 incrementGuess()
-                if (guessNumber == 6) {
+                if (guessNumber == 7) {
                     self.failure = true
                     objectWillChange.send()
                 }
