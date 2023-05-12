@@ -21,4 +21,4 @@ Improvement reflection:
 - Make puzzle random from a set bank of words
 - If a letter is used only once, it won't say it exists multiple times if used repeatedly.
 
-<img src="https://github.com/jimmy-lynch/Emojiey/blob/main/Emojiey%20Gif.gif" width=400>
+<img src="https://github.com/jimmy-lynch/FP-Wordle/blob/main/Wordle.gif" width=400>
